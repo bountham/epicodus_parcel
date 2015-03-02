@@ -47,6 +47,10 @@
         function volume() {
             return $this->length * $this->width * $this->height;
         }
+
+        function costToShip() {
+            return $this->weight + $this->volume();
+        }
     }
 
     $tempLength = $_GET['length'];
@@ -56,5 +60,5 @@
 
     $tempPackage = new Parcel($tempLength, $tempWidth, $tempHeight, $tempWeight);
 
-    echo $tempPackage->volume();
+    echo $tempPackage->costToShip();
 ?>
