@@ -58,7 +58,14 @@
     $tempHeight = $_GET['height'];
     $tempWeight = $_GET['weight'];
 
-    $tempPackage = new Parcel($tempLength, $tempWidth, $tempHeight, $tempWeight);
-
-    echo $tempPackage->costToShip();
+    if ($tempLength AND $tempWidth AND $tempHeight AND $tempWeight) {
+        $tempPackage = new Parcel($tempLength, $tempWidth, $tempHeight,
+            $tempWeight);
+            echo "<p>The volume of your parcel is " . $tempPackage->volume() .
+                " cubic inches.</p>";
+            echo "<p>Your parcel will cost $" . $tempPackage->costToShip() . " to
+                ship!</p>";
+    } else {
+        echo "Form fields cannot be blank! Please check your inputs!";
+    }    
 ?>
