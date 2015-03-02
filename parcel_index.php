@@ -2,13 +2,13 @@
     class Parcel {
         private $length;
         private $width;
-        private $depth;
+        private $height;
         private $weight;
 
-        function __construct($newLength, $newWidth, $newDepth, $newWeight) {
+        function __construct($newLength, $newWidth, $newHeight, $newWeight) {
             $this->length = $newLength;
             $this->width = $newWidth;
-            $this->depth = $newDepth;
+            $this->depth = $newHeight;
             $this->weight = $newWeight;
         }
 
@@ -20,8 +20,8 @@
             return $this->width;
         }
 
-        function getDepth() {
-            return $this->depth;
+        function getHeight() {
+            return $this->height;
         }
 
         function getWeight() {
@@ -32,13 +32,15 @@
             $this->length = $newLength;
         }
 
-        function setWidth($newWidth){
+        function setWidth($newWidth) {
             $this->width = $newWidth;
         }
-        function setDepth($newDepth){
-            $this->depth = $newDepth;
+
+        function setHeight($newHeight) {
+            $this->height = $newHeight;
         }
-        function setWeight($newWeight){
+
+        function setWeight($newWeight) {
             $this->weight = $newWeight;
         }
     }
@@ -53,6 +55,29 @@
         <link rel="stylesheet" href="css/parcel_style.css">
     </head>
     <body>
+        <div class="container">
+            <h1>Specify thine dimensions:</h1>
 
+            <div class="form-group">
+                <label for="length">Length:</label>
+                <input id="length" name="length" class="form-control"
+                type="number">
+            </div>
+            <div class="form-group">
+                <label for="width">Width:</label>
+                <input id="width" name="width" class="form-control"
+                type="number">
+            </div>
+            <div class="form-group">
+                <label for="height">Height:</label>
+                <input id="height" name="height" class="form-control"
+                type="number">
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight:</label>
+                <input id="weight" name="weight" class="form-control"
+                type="number">
+            </div>
+        </div>
     </body>
 </html>
