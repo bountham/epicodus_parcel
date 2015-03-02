@@ -54,9 +54,7 @@
     $tempHeight = $_GET['height'];
     $tempWeight = $_GET['weight'];
 
-    $tempPackage = array($tempLength, $tempWidth, $tempHeight, $tempWeight);
+    $tempPackage = new Parcel($tempLength, $tempWidth, $tempHeight, $tempWeight);
 
-    foreach($tempPackage as $value) {
-        echo $value;
-    }
+    echo $tempPackage->volume();
 ?>
