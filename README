@@ -1,0 +1,8 @@
+Parcel Shipping Rate Tool
+
+Version 1.0 2015
+
+Tommy Bountham, Cynthia Wilhelm
+
+PSRT is a PHP-based program which prompts user for dimensions and weight 
+of a parcel and determines volume and shipping cost for the parcel.
